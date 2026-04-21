@@ -69,6 +69,9 @@
       .card{padding:32px 20px;margin:0 16px}
       .btn-gold{padding:16px 36px}
       body{padding:20px 0}
+      #mainCols{flex-direction:column;align-items:center}
+      #mainCols .card{order:1}
+      #benefitsCol{order:2;width:100%;max-width:100%!important}
     }
     @media(max-width:480px){
       .card{padding:28px 16px}
@@ -115,10 +118,10 @@
   <div style="height:32px"></div>
 
   <!-- Layout: benefits + form -->
-  <div style="max-width:960px;width:100%;padding:0 20px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;justify-content:center">
+  <div id="mainCols" style="max-width:960px;width:100%;padding:0 20px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;justify-content:center">
 
     <!-- Benefits -->
-    <div style="flex:1;min-width:280px;max-width:420px">
+    <div id="benefitsCol" style="flex:1;min-width:280px;max-width:420px">
       <p style="font-size:13px;text-transform:uppercase;letter-spacing:3px;color:#D4AF37;font-weight:600;margin-bottom:20px">Cosa imparerai</p>
       <div class="benefit-item"><span class="benefit-icon">&#10003;</span><span>Come definire il tuo ICP in modo chirurgico con Claude AI e smettere di contattare chiunque</span></div>
       <div class="benefit-item"><span class="benefit-icon">&#10003;</span><span>La sequenza esatta di 7 messaggi che porta le persone dalla connessione alla call prenotata</span></div>
