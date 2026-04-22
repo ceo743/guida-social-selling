@@ -349,20 +349,19 @@ function submitForm(e){
   btn.disabled=true;
   btnText.textContent='INVIO IN CORSO...';
 
-  var data=new URLSearchParams({
-    name:nameF.value.trim(),
-    email:emailF.value.trim().toLowerCase(),
-    phone:cleanPhone(phoneF.value),
-    marketing_consent:document.getElementById('fieldMarketing').checked?'yes':'no',
-    utm_source:document.getElementById('utm_source').value,
-    utm_medium:document.getElementById('utm_medium').value,
-    utm_campaign:document.getElementById('utm_campaign').value,
-    utm_content:document.getElementById('utm_content').value
-  });
-
   fetch('https://hooks.zapier.com/hooks/catch/6421650/ujfgqoo/',{
     method:'POST',
-    body:data
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      name:nameF.value.trim(),
+      email:emailF.value.trim().toLowerCase(),
+      phone:cleanPhone(phoneF.value),
+      marketing_consent:document.getElementById('fieldMarketing').checked?'yes':'no',
+      utm_source:document.getElementById('utm_source').value,
+      utm_medium:document.getElementById('utm_medium').value,
+      utm_campaign:document.getElementById('utm_campaign').value,
+      utm_content:document.getElementById('utm_content').value
+    })
   }).catch(function(){});
 
   // Show modal + countdown
