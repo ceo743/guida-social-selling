@@ -227,11 +227,11 @@
       <div style="width:64px;height:64px;background:linear-gradient(135deg,#BF953F,#D4AF37);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 30px rgba(212,175,55,0.25)">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,28px);font-weight:800;margin-bottom:12px"><span class="gold">Guida inviata!</span></h2>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,28px);font-weight:800;margin-bottom:12px"><span class="gold">Guida inviata via email!</span></h2>
       <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:8px">Controlla la tua casella email, la guida sta arrivando.</p>
       <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:28px">Non la trovi? <strong style="color:rgba(255,255,255,0.8)">Controlla la cartella Spam o Promozioni</strong> e spostala nella posta in arrivo.</p>
       <a href="https://automazioni.davidecaiazzo.it/" class="btn-gold" style="font-size:12px;padding:18px 40px"><span>SCOPRI COME AUTOMATIZZIAMO TUTTO &rarr;</span></a>
-      <p style="font-size:11px;color:rgba(255,255,255,0.25);margin-top:16px">Verrai reindirizzato automaticamente tra <span id="countdownSec">10</span> secondi</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.25);margin-top:16px">Verrai reindirizzato automaticamente tra <span id="countdownSec">3</span> secondi</p>
     </div>
   </div>
 </div>
@@ -367,7 +367,7 @@ function submitForm(e){
   // Show modal + countdown
   setTimeout(function(){
     document.getElementById('confirmModal').classList.add('open');
-    var sec=10;
+    var sec=3;
     var countEl=document.getElementById('countdownSec');
     var timer=setInterval(function(){
       sec--;
