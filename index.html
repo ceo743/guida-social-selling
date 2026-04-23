@@ -351,6 +351,7 @@ function submitForm(e){
 
   fetch('https://hooks.zapier.com/hooks/catch/6421650/ujxpb0y/',{
     method:'POST',
+    keepalive:true,
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({
       name:nameF.value.trim(),
