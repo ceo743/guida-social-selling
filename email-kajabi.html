@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Kajabi — Social Selling in Automatico | Davide Caiazzo</title>
+<style>
+  body{font-family:monospace;max-width:960px;margin:40px auto;padding:20px;background:#0d1117;color:#e0e0e0;line-height:1.6}
+  h1{text-align:center;color:#fff;font-size:24px;margin-bottom:8px;font-family:sans-serif}
+  .intro{text-align:center;color:#8b949e;margin-bottom:40px;font-family:sans-serif;font-size:14px}
+  .email-block{background:#161b22;border:1px solid #30363d;border-radius:10px;margin-bottom:40px;overflow:hidden}
+  .email-header{background:#1f2937;padding:14px 20px;border-bottom:1px solid #30363d;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .email-header-left h2{margin:0;font-size:15px;color:#58a6ff;font-family:sans-serif}
+  .email-header-left .meta{font-size:12px;color:#8b949e;font-family:sans-serif;margin-top:2px}
+  .copy-btn{background:#238636;color:#fff;border:none;padding:7px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:bold;transition:background 0.2s;white-space:nowrap}
+  .copy-btn:hover{background:#2ea043}
+  .copy-btn.copied{background:#1f6feb}
+  .subject-bar{background:#161b22;padding:9px 20px;border-bottom:1px solid #30363d;font-size:13px;color:#f0883e;font-family:sans-serif}
+  .subject-bar strong{color:#f0883e}
+  pre{margin:0;padding:20px;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word;font-size:13px;line-height:1.6;color:#c9d1d9;max-height:400px;overflow-y:auto}
+  .notes{background:#1c1f26;border-left:3px solid #D4AF37;padding:12px 18px;margin:0;font-size:12px;color:#8b949e;font-family:sans-serif}
+  .notes strong{color:#D4AF37}
+  .setup-box{background:#161b22;border:1px solid rgba(212,175,55,0.2);border-radius:10px;padding:24px;margin-bottom:40px;font-family:sans-serif}
+  .setup-box h2{color:#D4AF37;font-size:16px;margin-bottom:12px}
+  .setup-box table{width:100%;border-collapse:collapse;font-size:13px}
+  .setup-box th{text-align:left;color:#8b949e;padding:6px 12px;border-bottom:1px solid #30363d;font-weight:600}
+  .setup-box td{padding:8px 12px;border-bottom:1px solid #1f2937;color:#c9d1d9}
+  .setup-box tr:last-child td{border-bottom:none}
+  .badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700}
+  .badge-gold{background:rgba(212,175,55,0.15);color:#D4AF37;border:1px solid rgba(212,175,55,0.2)}
+  .badge-green{background:rgba(46,160,67,0.15);color:#2ea043;border:1px solid rgba(46,160,67,0.2)}
+</style>
+</head>
+<body>
+
+<h1>📧 Email Kajabi — Social Selling in Automatico</h1>
+<p class="intro">
+  Trigger: Download guida "Social Selling in Automatico — Edizione Premium"<br>
+  Goal: Prenotazione Consulenza Strategica Gratuita LinkedIn → <strong style="color:#D4AF37">calendly.com/dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy</strong><br>
+  <br>
+  Copia l'HTML di ogni email e incollalo nell'editor HTML di Kajabi.<br>
+  Link cartella Drive: <code style="color:#27ae60">https://drive.google.com/drive/folders/1Uv2XqblwylUwxltoGwm5qX5r6UqH_yZf</code>
+</p>
+
+<!-- ===== SETUP TABLE ===== -->
+<div class="setup-box">
+  <h2>⚙️ Configurazione Sequenza Kajabi</h2>
+  <table>
+    <tr><th>Email</th><th>Titolo Interno</th><th>Invio</th><th>Oggetto</th></tr>
+    <tr><td><span class="badge badge-gold">1</span></td><td>Consegna Guida</td><td>Immediatamente</td><td>Eccola. La guida è qui.</td></tr>
+    <tr><td><span class="badge badge-gold">2</span></td><td>Inizia da qui</td><td>Giorno 0+1 · ore 10:00</td><td>Inizia da qui. Tre cose da fare, nell'ordine.</td></tr>
+    <tr><td><span class="badge badge-gold">3</span></td><td>6 clienti in 30 giorni</td><td>Giorno 2 · ore 10:00</td><td>6 clienti in 30 giorni, partendo da zero.</td></tr>
+    <tr><td><span class="badge badge-gold">4</span></td><td>La sezione che si salta</td><td>Giorno 4 · ore 10:00</td><td>La sezione che la maggior parte delle persone salta</td></tr>
+    <tr><td><span class="badge badge-gold">5</span></td><td>Il profilo sbagliato</td><td>Giorno 6 · ore 10:00</td><td>Il tuo profilo risponde alla domanda sbagliata</td></tr>
+    <tr><td><span class="badge badge-gold">6</span></td><td>Obiezione settore</td><td>Giorno 8 · ore 10:00</td><td>"Ma nel mio settore non funziona"</td></tr>
+    <tr><td><span class="badge badge-green">7</span></td><td>Caso Studio 150M</td><td>Giorno 11 · ore 10:00</td><td>150 milioni di euro. Zero advertising.</td></tr>
+    <tr><td><span class="badge badge-green">8</span></td><td>Ultima email</td><td>Giorno 14 · ore 10:00</td><td>L'ultima email di questa sequenza.</td></tr>
+  </table>
+  <p style="font-size:12px;color:#8b949e;margin-top:16px">
+    <strong style="color:#D4AF37">Exit condition:</strong> Il contatto prenota la Consulenza Gratuita LinkedIn → rimuovere dalla sequenza<br>
+    <strong style="color:#D4AF37">Tag Kajabi:</strong> aggiungere tag <code>guida-social-selling</code> all'iscrizione · rimuovere con tag <code>consulenza-linkedin-prenotata</code>
+  </p>
+</div>
+
+<!-- ==================== EMAIL 1 — CONSEGNA ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 1 — Consegna Guida</h2>
+      <div class="meta">Invio: Immediatamente · Trigger: iscrizione alla sequenza</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email1')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> Eccola. La guida è qui.</div>
+  <div class="notes"><strong>Link cartella Drive:</strong> <code>https://drive.google.com/drive/folders/1Uv2XqblwylUwxltoGwm5qX5r6UqH_yZf</code> — <strong style="color:#e74c3c">⚠️ Verifica che la cartella sia pubblica su Drive prima di attivare</strong></div>
+  <pre id="email1">&lt;p&gt;Ciao {{ contact.first_name }},&lt;/p&gt;
+
+&lt;p&gt;come promesso, eccola.&lt;/p&gt;
+
+&lt;p style="text-align:center;margin:28px 0"&gt;
+  &lt;a href="https://drive.google.com/drive/folders/1Uv2XqblwylUwxltoGwm5qX5r6UqH_yZf" style="display:inline-block;background:linear-gradient(135deg,#BF953F,#D4AF37);color:#000;text-decoration:none;padding:16px 36px;border-radius:50px;font-weight:700;font-size:15px;letter-spacing:0.5px"&gt;
+    📥 SCARICA LA GUIDA — Social Selling in Automatico
+  &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Trovi dentro la guida PDF (36 pagine) e i 7 Prompt Claude per l'Acquisizione Clienti LinkedIn.&lt;/p&gt;
+
+&lt;p&gt;Da dove iniziare:&lt;/p&gt;
+
+&lt;p&gt;→ &lt;strong&gt;Pagina 4&lt;/strong&gt;: perché il cold outreach tradizionale è morto&lt;br&gt;
+→ &lt;strong&gt;Pagina 6&lt;/strong&gt;: il Framework SSS, tutta la logica del sistema in una sola pagina&lt;br&gt;
+→ &lt;strong&gt;Pagina 21&lt;/strong&gt;: i 3 casi studio reali, dal messaggio all'appuntamento prenotato&lt;/p&gt;
+
+&lt;p&gt;Nelle prossime settimane ti mando le parti che la maggior parte delle persone salta. Quelle che fanno la differenza tra 3% e 40% di risposta.&lt;/p&gt;
+
+&lt;p&gt;Buona lettura,&lt;br&gt;
+&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style="font-size:12px;color:#888;margin-top:24px"&gt;
+  Davide Caiazzo · CEO 4 aziende · EXIT €10M · 2x TEDx · 232.000 follower LinkedIn
+&lt;/p&gt;</pre>
+</div>
+
+
+<!-- ==================== EMAIL 2 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 2 — inizia da qui</h2>
+      <div class="meta">Invio: Giorno 0+1 ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email2')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> Inizia da qui. Tre cose da fare, nell'ordine.</div>
+  <div class="notes"><strong>Preview text:</strong> Tre azioni concrete. Nell'ordine giusto.</div>
+  <pre id="email2">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Hai scaricato la guida. Questo significa che hai già preso una decisione.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;La maggior parte delle persone che scaricano guide gratuite non le aprono. O le aprono, le scorrono in 3 minuti e le chiudono. Poi si chiedono perché i loro messaggi LinkedIn non ricevono risposta.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Tu hai 36 pagine davanti che cambiano completamente questa dinamica.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 16px;font-size:16px;color:#1a1a1a;line-height:1.75;font-weight:600;&quot;&gt;Tre cose da fare adesso, nell&#x27;ordine:&lt;/p&gt;
+
+            &lt;!-- Action list --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;border-left:4px solid #0d0d0d;padding:24px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 14px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;1 &amp;rarr;&lt;/strong&gt;&amp;nbsp; Pagina 4: perché il cold outreach tradizionale è morto. Se non capisci questo, il resto non ha senso&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 14px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;2 &amp;rarr;&lt;/strong&gt;&amp;nbsp; Pagina 6: il Framework SSS. È l&#x27;intera logica del sistema in una sola pagina&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;3 &amp;rarr;&lt;/strong&gt;&amp;nbsp; Pagina 21: i 3 casi studio. Messaggi reali, risultati reali, persone che partivano da zero&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;!-- Stats highlight --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#0d0d0d;padding:24px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 16px;font-size:11px;color:#aaaaaa;letter-spacing:3px;text-transform:uppercase;&quot;&gt;I NUMERI DEL SISTEMA&lt;/p&gt;
+                  &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;width:50%;padding-right:12px;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:13px;color:#888888;&quot;&gt;Cold message generico&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:28px;font-weight:700;color:#ffffff;&quot;&gt;1&amp;ndash;3%&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:13px;color:#888888;&quot;&gt;Tasso di risposta&lt;/p&gt;
+                      &lt;/td&gt;
+                      &lt;td style=&quot;width:50%;padding-left:12px;border-left:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:13px;color:#888888;&quot;&gt;SSS + Claude&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:28px;font-weight:700;color:#ffffff;&quot;&gt;25&amp;ndash;45%&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:13px;color:#888888;&quot;&gt;Tasso di risposta&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;La differenza non è il prodotto. Non è il settore. È il metodo.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Nelle prossime settimane ti spiego le parti che la maggior parte delle persone salta. Inizia a leggere.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+<!-- ==================== EMAIL 3 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 3 — da 0 a 6 clienti in 30 giorni</h2>
+      <div class="meta">Invio: Giorno 2 · ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email3')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> 6 clienti in 30 giorni, partendo da zero.</div>
+  <div class="notes"><strong>Preview text:</strong> Il caso studio che mostra il sistema in azione.</div>
+  <pre id="email3">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;6 clienti in 30 giorni, partendo da zero.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Bruno Calabretta era un manager in una multinazionale. Voleva costruire qualcosa di suo nel mondo Web3, ma non aveva clienti, non aveva visibilità su LinkedIn e non poteva ancora lasciare il lavoro.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 16px;font-size:15px;color:#666666;line-height:1.7;&quot;&gt;Quello che ha fatto non è inviare messaggi a raffica. Ha usato questo:&lt;/p&gt;
+
+            &lt;!-- Quote box --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;border-left:4px solid #0d0d0d;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0;font-size:15px;color:#1a1a1a;line-height:1.8;font-style:italic;&quot;&gt;&quot;Ho visto il tuo lavoro sull&#x27;ecosistema ICP Hub. Pochi in Italia stanno costruendo una community Web3 con quella chiarezza strategica. Mi interessa capire come stai strutturando l&#x27;acquisizione dei primi partner. Connessione?&quot;&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Niente pitch. Niente &quot;ti presento il mio servizio&quot;. Un&#x27;osservazione specifica, una curiosità genuina.&lt;/p&gt;
+
+            &lt;!-- Stats box --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#0d0d0d;padding:28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 20px;font-size:11px;color:#aaaaaa;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Bruno Calabretta &amp;bull; Web3 Expert&lt;/p&gt;
+
+                  &lt;p style=&quot;margin:0 0 8px;font-size:38px;font-weight:700;color:#ffffff;line-height:1.1;&quot;&gt;6 clienti&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 24px;font-size:16px;color:#aaaaaa;&quot;&gt;In 30 giorni, partendo da zero&lt;/p&gt;
+
+                  &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;border-top:1px solid #333333;padding-top:20px;margin-top:0;&quot;&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;padding-top:20px;&quot;&gt;
+                        &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+                          &lt;tr&gt;
+                            &lt;td style=&quot;width:50%;padding-right:12px;&quot;&gt;
+                              &lt;p style=&quot;margin:0 0 4px;font-size:12px;color:#888888;text-transform:uppercase;letter-spacing:1px;&quot;&gt;Prima&lt;/p&gt;
+                              &lt;p style=&quot;margin:0;font-size:20px;font-weight:700;color:#ffffff;&quot;&gt;16 consiglia&lt;/p&gt;
+                              &lt;p style=&quot;margin:0;font-size:14px;color:#888888;&quot;&gt;0 commenti&lt;/p&gt;
+                            &lt;/td&gt;
+                            &lt;td style=&quot;width:50%;padding-left:12px;border-left:1px solid #333333;&quot;&gt;
+                              &lt;p style=&quot;margin:0 0 4px;font-size:12px;color:#888888;text-transform:uppercase;letter-spacing:1px;&quot;&gt;Dopo&lt;/p&gt;
+                              &lt;p style=&quot;margin:0;font-size:20px;font-weight:700;color:#ffffff;&quot;&gt;428 consiglia&lt;/p&gt;
+                              &lt;p style=&quot;margin:0;font-size:14px;color:#888888;&quot;&gt;159 commenti&lt;/p&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Ogni giorno senza un sistema come questo è un giorno in cui il tuo ICP riceve messaggi dai tuoi competitor.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 32px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Se vuoi capire come costruire questo per il tuo caso specifico, il team DC Academy fa una call gratuita di 20 minuti.&lt;/p&gt;
+
+            &lt;!-- CTA Button --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 36px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;a href=&quot;https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy?utm_source=email_sequence&amp;utm_campaign=social_selling&amp;utm_medium=email&amp;utm_content=email_2&quot;
+                     style=&quot;display:inline-block;background-color:#0d0d0d;color:#ffffff;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:16px 32px;&quot;&gt;
+                    PRENOTA LA CALL GRATUITA &amp;rarr;
+                  &lt;/a&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+<!-- ==================== EMAIL 4 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 4 — la sezione che la maggior parte salta</h2>
+      <div class="meta">Invio: Giorno 4 · ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email4')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> La sezione che la maggior parte delle persone salta</div>
+  <div class="notes"><strong>Preview text:</strong> È quella che fa la differenza tra 5% e 40% di risposta.</div>
+  <pre id="email4">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;In questo momento, qualcuno sta inviando un messaggio LinkedIn al tuo prospect.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;È scritto bene. Ha una personalizzazione. Ha una proposta chiara.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;E verrà ignorato come gli altri 15 messaggi che quella persona ha ricevuto questa settimana.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Il motivo è semplice: tutti fanno la stessa cosa. Tutti scrivono testo. Tutti seguono gli stessi template.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 28px;font-size:16px;color:#1a1a1a;line-height:1.75;font-weight:600;&quot;&gt;La risposta non è scrivere testo migliore.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Vai a pagina 14 della guida. Le voice note.&lt;/p&gt;
+
+            &lt;!-- Stats highlight --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#0d0d0d;padding:28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 20px;font-size:15px;color:#ffffff;line-height:1.7;&quot;&gt;Una voice note di 45 secondi ottiene il 40-60% di risposte in più rispetto allo stesso messaggio scritto. Non perché sia un trucco, ma perché quando il prospect sente la tua voce, non sei più uno degli altri 15. Sei una persona reale.&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 8px;font-size:11px;color:#aaaaaa;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Risposte in più vs stesso messaggio scritto&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:44px;font-weight:700;color:#ffffff;line-height:1.1;&quot;&gt;40&amp;ndash;60%&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 16px;font-size:15px;color:#666666;line-height:1.7;font-weight:600;&quot;&gt;La struttura esatta in 60 secondi (pagina 14):&lt;/p&gt;
+
+            &lt;!-- Framework box --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;border-left:4px solid #0d0d0d;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;1.&lt;/strong&gt;&amp;nbsp; Apertura personalizzata (5-8 sec): nome + riferimento specifico&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;2.&lt;/strong&gt;&amp;nbsp; Hook di rilevanza (10 sec): perché stai scrivendo proprio a lui&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;3.&lt;/strong&gt;&amp;nbsp; Insight di valore (20-30 sec): qualcosa di utile per il suo contesto&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;4.&lt;/strong&gt;&amp;nbsp; CTA leggera (5-8 sec): una domanda o proposta morbida&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Nella guida ci sono 4 script pronti e la sequenza di quando usarla.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Invia una voice note nei tuoi prossimi 5 messaggi. Poi guarda cosa succede.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+<!-- ==================== EMAIL 5 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 5 — il tuo profilo risponde alla domanda sbagliata</h2>
+      <div class="meta">Invio: Giorno 6 · ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email5')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> Il tuo profilo risponde alla domanda sbagliata</div>
+  <div class="notes"><strong>Preview text:</strong> Prima ancora di leggere il tuo messaggio, fanno questa cosa.</div>
+  <pre id="email5">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Quando qualcuno riceve il tuo messaggio LinkedIn, prima di rispondere fa una cosa sola.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Visita il tuo profilo.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;In quel momento ha 3 secondi per decidere se sei qualcuno a cui vale la pena rispondere.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;La maggior parte dei profili risponde alla domanda &quot;chi sei?&quot; con titolo, azienda, anni di esperienza. Come un CV. Il problema è che il tuo prospect non ti sta assumendo: sta decidendo se risponderti.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 28px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;La domanda a cui il tuo profilo deve rispondere è un&#x27;altra: &quot;cosa ci guadagno io a parlare con questa persona?&quot;&lt;/p&gt;
+
+            &lt;!-- Quote highlight --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#0d0d0d;padding:24px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:16px;color:#ffffff;line-height:1.7;font-style:italic;&quot;&gt;&quot;La maggior parte dei profili LinkedIn sono CV. Dovrebbero essere landing page.&quot;&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:12px;color:#888888;letter-spacing:2px;text-transform:uppercase;&quot;&gt;Pagina 8 della guida&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 16px;font-size:15px;color:#666666;line-height:1.7;font-weight:600;&quot;&gt;Le 5 sezioni critiche da ottimizzare (pagina 8-9):&lt;/p&gt;
+
+            &lt;!-- Sections list --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;border-left:4px solid #0d0d0d;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;Headline&lt;/strong&gt;: non il tuo titolo, il valore che offri&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;Banner&lt;/strong&gt;: value prop chiara e CTA visibile&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;Sommario&lt;/strong&gt;: problema che risolvi, come, proof, CTA&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;Esperienze&lt;/strong&gt;: risultati concreti, non mansioni&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;&lt;strong&gt;Featured&lt;/strong&gt;: case study, post virali, risorse gratuite&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Se il tuo profilo non risponde a questa domanda in 3 secondi, ogni messaggio che invii perde una parte della sua efficacia. Non importa quanto sia buono il messaggio.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Pagina 9 ha il prompt completo per riscrivere il tuo sommario con Claude in 10 minuti.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+<!-- ==================== EMAIL 6 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 6 — ma il mio settore è diverso</h2>
+      <div class="meta">Invio: Giorno 8 · ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email6')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> "Ma nel mio settore non funziona"</div>
+  <div class="notes"><strong>Preview text:</strong> Risposta diretta all'obiezione più comune.</div>
+  <pre id="email6">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&quot;Ma nel mio settore non funziona.&quot;&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 32px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;È l&#x27;obiezione che sento quasi sempre. Ed è comprensibile: il tuo settore ha le sue specificità, i suoi clienti, il suo linguaggio.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 32px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Ma guarda chi l&#x27;ha detto prima di te.&lt;/p&gt;
+
+            &lt;!-- Case study 1: Inga --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 16px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 4px;font-size:11px;color:#888888;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Mercati DACH (Germania, Austria, Svizzera)&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:16px;color:#1a1a1a;font-weight:700;line-height:1.4;&quot;&gt;Inga Hockenbring&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;Mercato bilingue, B2B complesso, clienti che decidono in modo completamente diverso rispetto all&#x27;Italia. Risultato: nuovi clienti, posizionamento trovato, metodo rinnovato.&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;!-- Case study 2: Manuela --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 16px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 4px;font-size:11px;color:#888888;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Coach certificata ICF, ex CFO&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:16px;color:#1a1a1a;font-weight:700;line-height:1.4;&quot;&gt;Manuela Barion&lt;/p&gt;
+                  &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;width:33%;text-align:center;padding:8px 4px;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:22px;font-weight:700;color:#1a1a1a;&quot;&gt;250&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:12px;color:#888888;&quot;&gt;Quiz compilati&lt;/p&gt;
+                      &lt;/td&gt;
+                      &lt;td style=&quot;width:33%;text-align:center;padding:8px 4px;border-left:1px solid #dddddd;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:22px;font-weight:700;color:#1a1a1a;&quot;&gt;15&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:12px;color:#888888;&quot;&gt;Call ottenute&lt;/p&gt;
+                      &lt;/td&gt;
+                      &lt;td style=&quot;width:34%;text-align:center;padding:8px 4px;border-left:1px solid #dddddd;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:22px;font-weight:700;color:#1a1a1a;&quot;&gt;5&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:12px;color:#888888;&quot;&gt;Contratti chiusi&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                  &lt;p style=&quot;margin:8px 0 0;font-size:13px;color:#888888;text-align:center;&quot;&gt;In pochi giorni dall&#x27;inizio della collaborazione&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;!-- Case study 3: Matteo --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 4px;font-size:11px;color:#888888;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Cash Management BNL Gruppo BNP Paribas&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 12px;font-size:16px;color:#1a1a1a;font-weight:700;line-height:1.4;&quot;&gt;Matteo Pianosi&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 8px;font-size:15px;color:#1a1a1a;line-height:1.7;&quot;&gt;Banca, settore regolamentato, profilo non &quot;da imprenditore&quot;. Risultato: da 0 a &lt;strong&gt;4 clienti in 15 giorni&lt;/strong&gt;, senza lasciare il lavoro.&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Settori diversi. Profili diversi. Stesso sistema.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Il principio non cambia: le persone comprano da chi conoscono, rispettano e si fidano. Quello che cambia è l&#x27;ICP e il linguaggio. Non la logica.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Se pensi ancora che il tuo caso sia diverso, è esattamente il tipo di dubbio che si risolve in 20 minuti di call.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+<!-- ==================== EMAIL 7 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 7 — 150 milioni di euro. zero advertising.</h2>
+      <div class="meta">Invio: Giorno 11 · ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email7')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> 150 milioni di euro. Zero advertising.</div>
+  <div class="notes"><strong>Preview text:</strong> Il caso Arroweld. E la call gratuita.</div>
+  <pre id="email7">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Mirco Gasparotto guida Arroweld Italia S.p.A., un gruppo da 150 milioni di euro.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Le aziende di quella dimensione di solito non fanno outreach. Vivono di referral, di relazioni costruite in anni. Il problema è che questo sistema funziona finché funziona. Non è scalabile. Non è prevedibile.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Quello che non aveva era un metodo per costruire pipeline in modo sistematico, senza dipendere da chi già lo conosceva.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 16px;font-size:15px;color:#666666;line-height:1.7;&quot;&gt;Il messaggio che ha usato:&lt;/p&gt;
+
+            &lt;!-- Quote box --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;border-left:4px solid #0d0d0d;padding:22px 28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0;font-size:15px;color:#1a1a1a;line-height:1.8;font-style:italic;&quot;&gt;&quot;Ho letto il tuo post sulla crescita nei mercati industriali. Guidare un gruppo da quelle dimensioni mantenendo agilità commerciale è raro. Sono curioso di come gestite l&#x27;acquisizione clienti B2B a livello di gruppo. Posso aggiungerti?&quot;&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;!-- Stats box --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#0d0d0d;padding:28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 20px;font-size:11px;color:#aaaaaa;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Mirco Gasparotto &amp;bull; Gruppo Arroweld Italia S.p.A.&lt;/p&gt;
+
+                  &lt;p style=&quot;margin:0 0 8px;font-size:14px;color:#888888;letter-spacing:2px;text-transform:uppercase;&quot;&gt;In 4 mesi. Zero advertising.&lt;/p&gt;
+
+                  &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:16px 0 20px;&quot;&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;width:50%;padding-right:12px;padding-bottom:16px;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:26px;font-weight:700;color:#ffffff;line-height:1.1;&quot;&gt;+650&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:13px;color:#888888;&quot;&gt;Click sul link della CTA&lt;/p&gt;
+                      &lt;/td&gt;
+                      &lt;td style=&quot;width:50%;padding-left:12px;padding-bottom:16px;border-left:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:26px;font-weight:700;color:#ffffff;line-height:1.1;&quot;&gt;1&amp;ndash;2&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:13px;color:#888888;&quot;&gt;Clienti nuovi al giorno&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;width:50%;padding-right:12px;padding-top:16px;border-top:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:26px;font-weight:700;color:#ffffff;line-height:1.1;&quot;&gt;+4.000&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:13px;color:#888888;&quot;&gt;Follower in 4 mesi&lt;/p&gt;
+                      &lt;/td&gt;
+                      &lt;td style=&quot;width:50%;padding-left:12px;padding-top:16px;border-top:1px solid #333333;border-left:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 4px;font-size:13px;color:#888888;&quot;&gt;Engagement&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:15px;color:#ffffff;line-height:1.4;&quot;&gt;Da 2 a 560 consiglia&lt;br&gt;da 0 a 38 commenti&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Se funziona per un gruppo da 150 milioni, funziona per te.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Il problema non è il settore. Non è la dimensione. È il metodo.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 32px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Il team di Davide fa una call gratuita di 20 minuti per capire se e come il sistema funziona nel tuo caso specifico.&lt;/p&gt;
+
+            &lt;!-- CTA Button --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 36px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;a href=&quot;https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy?utm_source=email_sequence&amp;utm_campaign=social_selling&amp;utm_medium=email&amp;utm_content=email_6&quot;
+                     style=&quot;display:inline-block;background-color:#0d0d0d;color:#ffffff;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:16px 32px;&quot;&gt;
+                    PRENOTA LA CALL GRATUITA &amp;rarr;
+                  &lt;/a&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+<!-- ==================== EMAIL 8 ==================== -->
+<div class="email-block">
+  <div class="email-header">
+    <div class="email-header-left">
+      <h2>EMAIL 8 — l'ultima email di questa sequenza</h2>
+      <div class="meta">Invio: Giorno 14 · ore 10:00</div>
+    </div>
+    <button class="copy-btn" onclick="copyEmail(this,'email8')">Copia HTML</button>
+  </div>
+  <div class="subject-bar"><strong>Oggetto:</strong> L'ultima email di questa sequenza.</div>
+  <div class="notes"><strong>Preview text:</strong> Un'ultima domanda diretta prima di chiudere.</div>
+  <pre id="email8">&lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;{{ first_name }},&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Questa è l&#x27;ultima email di questa sequenza. Non ne arriveranno altre.&lt;/p&gt;
+
+            &lt;!-- Results summary box --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#0d0d0d;padding:28px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 20px;font-size:11px;color:#aaaaaa;letter-spacing:3px;text-transform:uppercase;&quot;&gt;Chi ha applicato il sistema&lt;/p&gt;
+
+                  &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;padding:12px 0;border-bottom:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 3px;font-size:13px;color:#aaaaaa;&quot;&gt;Bruno Calabretta &amp;bull; Web3&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:16px;color:#ffffff;font-weight:600;&quot;&gt;Da 0 a 6 clienti in 30 giorni&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;padding:12px 0;border-bottom:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 3px;font-size:13px;color:#aaaaaa;&quot;&gt;Mirco Gasparotto &amp;bull; Gruppo 150M&amp;euro;&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:16px;color:#ffffff;font-weight:600;&quot;&gt;1&amp;ndash;2 clienti nuovi al giorno, zero advertising&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;padding:12px 0;border-bottom:1px solid #333333;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 3px;font-size:13px;color:#aaaaaa;&quot;&gt;Manuela Barion &amp;bull; Coach ICF&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:16px;color:#ffffff;font-weight:600;&quot;&gt;250 quiz, 15 call, 5 contratti chiusi&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td style=&quot;padding:12px 0;&quot;&gt;
+                        &lt;p style=&quot;margin:0 0 3px;font-size:13px;color:#aaaaaa;&quot;&gt;Matteo Pianosi &amp;bull; BNL&lt;/p&gt;
+                        &lt;p style=&quot;margin:0;font-size:16px;color:#ffffff;font-weight:600;&quot;&gt;Da 0 a 4 clienti in 15 giorni&lt;/p&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 22px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;Questi non sono outlier. Sono il risultato di un sistema applicato in modo corretto.&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 32px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;La domanda non è se il sistema funziona. La domanda è: tra 6 mesi farai parte di questa lista o leggerai ancora degli altri che l&#x27;hanno fatto prima di te?&lt;/p&gt;
+
+            &lt;p style=&quot;margin:0 0 16px;font-size:15px;color:#666666;font-weight:600;&quot;&gt;Hai due opzioni.&lt;/p&gt;
+
+            &lt;!-- Option 1 --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 12px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#f5f5f5;padding:20px 24px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 8px;font-size:13px;color:#888888;letter-spacing:2px;text-transform:uppercase;&quot;&gt;Opzione 1&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 8px;font-size:16px;color:#1a1a1a;font-weight:700;&quot;&gt;Applichi il sistema da solo&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:14px;color:#666666;line-height:1.7;&quot;&gt;La guida ha tutto: 8 step, piano 30 giorni, 50 opener, 20 template obiezioni, prompt avanzati per Claude.&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;!-- Option 2 --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 28px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td style=&quot;background-color:#1a1a1a;padding:20px 24px;&quot;&gt;
+                  &lt;p style=&quot;margin:0 0 8px;font-size:13px;color:#888888;letter-spacing:2px;text-transform:uppercase;&quot;&gt;Opzione 2&lt;/p&gt;
+                  &lt;p style=&quot;margin:0 0 8px;font-size:16px;color:#ffffff;font-weight:700;&quot;&gt;Il team di Davide costruisce il sistema per te&lt;/p&gt;
+                  &lt;p style=&quot;margin:0;font-size:14px;color:#aaaaaa;line-height:1.7;&quot;&gt;Profilo ottimizzato, content warming, sequenza messaggi, automazione. Tu ti concentri sulle call, loro si occupano del resto.&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0 0 32px;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;La seconda opzione inizia con una call gratuita di 20 minuti. Nessun impegno.&lt;/p&gt;
+
+            &lt;!-- CTA Button --&gt;
+            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;margin:0 0 36px;&quot;&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;a href=&quot;https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy?utm_source=email_sequence&amp;utm_campaign=social_selling&amp;utm_medium=email&amp;utm_content=email_7&quot;
+                     style=&quot;display:inline-block;background-color:#0d0d0d;color:#ffffff;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:16px 32px;&quot;&gt;
+                    PRENOTA LA CALL GRATUITA &amp;rarr;
+                  &lt;/a&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+            &lt;p style=&quot;margin:0;font-size:16px;color:#1a1a1a;line-height:1.75;&quot;&gt;&lt;strong&gt;Davide&lt;/strong&gt;&lt;/p&gt;</pre>
+</div>
+
+
+<script>
+function copyEmail(btn, id){
+  var pre=document.getElementById(id);
+  var text=pre.textContent;
+  navigator.clipboard.writeText(text).then(function(){
+    btn.textContent='✓ Copiato!';
+    btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='Copia HTML';btn.classList.remove('copied');},2500);
+  }).catch(function(){
+    var ta=document.createElement('textarea');
+    ta.value=text;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    btn.textContent='✓ Copiato!';btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='Copia HTML';btn.classList.remove('copied');},2500);
+  });
+}
+</script>
+</body>
+</html>
