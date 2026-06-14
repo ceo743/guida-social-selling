@@ -178,7 +178,7 @@
           <input type="text" name="name" id="fieldName" class="form-field" placeholder="Nome e Cognome" required/>
           <input type="email" name="email" id="fieldEmail" class="form-field" placeholder="Email" required/>
           <p class="field-error-msg" id="errEmail">Inserisci un indirizzo email valido (es. nome@email.com)</p>
-          <input type="tel" name="phone" id="fieldPhone" class="form-field" placeholder="Telefono" required/>
+          <input type="tel" inputmode="tel" pattern="^(?=(?:\D*\d){9,13}\D*$)[\d\s+().\-]+$" title="Inserisci un numero di telefono valido (da 9 a 13 cifre)" name="phone" id="fieldPhone" class="form-field" placeholder="Telefono" required/>
           <p class="field-error-msg" id="errPhone">Inserisci un numero di telefono valido (minimo 8 cifre)</p>
           <div style="display:flex;gap:10px;align-items:flex-start;margin-top:4px">
             <input type="checkbox" id="fieldPrivacy" required style="margin-top:3px;accent-color:#D4AF37;width:16px;height:16px;flex-shrink:0"/>
