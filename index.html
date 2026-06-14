@@ -309,7 +309,13 @@ function isValidPhone(phone){
   var cleaned=phone.replace(/[\s\-\(\)\.]/g,'');
   if(cleaned.startsWith('+'))cleaned=cleaned.slice(1);
   if(!/^\d+$/.test(cleaned))return false;
-  return cleaned.length>=8&&cleaned.length<=15;
+  if(cleaned.slice(0,2)==='00')cleaned=cleaned.slice(2);
+  if(cleaned.length<9||cleaned.length>13)return false;
+  if(/^(\d)\1+$/.test(cleaned))return false;
+  if('01234567890'.indexOf(cleaned)>=0||'09876543210'.indexOf(cleaned)>=0)return false;
+  var u={},n=0,i;for(i=0;i<cleaned.length;i++){if(!u[cleaned[i]]){u[cleaned[i]]=1;n++;}}
+  if(n<3)return false;
+  return true;
 }
 function cleanPhone(phone){
   var c=phone.replace(/[\s\-\(\)\.]/g,'');
